@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карта</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="corner-trigger"></div> 
+    <div class="settings-container">
+        <div class="settings">
+            <label for="language">Язык:</label>
+            <select id="language" onchange="changeLanguage()">
+                <option value="ru">Русский</option>
+                <option value="en">English</option>
+                <option value="ge">ქართული</option>
+            </select>
+        </div>
+    </div>
+    <div class="controls">
+        <button id="start" onclick="">Начать</button>  
+        <label for="prise_road">Цена дороги:</label>
+        <input type="number" id="prise_road" placeholder="">
+        <label for="prise_road_in_mountine">Цена дороги в горах:</label>
+        <input type="number" id="prise_road_in_mountine" placeholder="">
+        <label for="prise_road_in_swamp">Цена дороги в болоте:</label>
+        <input type="number" id="prise_road_in_swamp" placeholder="">
+    </div>
+    <div class="modes-canvas">
+        <div class="modes"> 
+            <button id="city" onclick="setMode('city')">Город</button>
+            <button id="mountain" onclick="setMode('mountain')">Гора</button>
+            <button id="swamp" onclick="setMode('swamp')">Болото</button>
+            <button id="erase" onclick="setMode('erase')">Ластик</button>
+            <button id="clearMap" onclick="clearMap()">Убрать всё</button>
+            <div class="contrlMap">
+                <input type="text" id="mapName" placeholder="Имя карты">
+                <button id="saveMap" onclick="saveMap()">Сохранить</button>
+                <button id="loadMap" onclick="loadMap()">Загрузить</button>
+                <button id="deleteMap" onclick="deleteMap()">Удалить</button>
+                <button id="clearStorge" onclick="clearStorage()">Очистить сохранение</button>
+            </div>
+        </div>
+        <canvas id="mapCanvas"></canvas>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/language.js"></script>
+</body>
+</html>
