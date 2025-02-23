@@ -1,0 +1,219 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap; 
+}
+
+.controls button, .controls input, .controls label {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.controls button {
+    background-color: #ccc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.controls button:hover {
+    background-color: #999;
+}
+
+.controls input {
+    width: 100px;
+}
+
+.modes-canvas {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+.modes {
+    margin-left: 10px;
+    display: flex; 
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modes button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contrlMap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.contrlMap input {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 77%;
+}
+
+.contrlMap label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px; 
+}
+
+#city {
+    background-color: #3498db;
+}
+#city:hover {
+    background-color: #48abed;
+}
+
+#erase {
+    background-color: #e74c3c;
+}
+#erase:hover {
+    background-color: #e95e4b;
+}
+
+#mountain {
+    background-color: #7f8c8d;
+}
+#mountain:hover {
+    background-color: #95a5a6;
+}
+
+#swamp {
+    background-color: #27ae60;
+}
+#swamp:hover {
+    background-color: #2ecc71;
+}
+
+#clearMap {
+    background-color: #f00000;
+}
+#contrlMap:hover {
+    background-color: #ff0000;
+}
+
+#start {
+    background-color: #15b603;
+}
+#start:hover {
+    background-color: #1ccf04;
+}
+
+#saveMap {
+    background-color: #f39c12;
+}
+#saveMap:hover {
+    background-color: #f1c40f;
+}
+
+#loadMap {
+    background-color: #9b59b6;
+}
+#loadMap:hover {
+    background-color: #8e44ad;
+}
+
+#deleteMap {
+    background-color: #e74c3c;
+}
+#deleteMap:hover {
+    background-color: #e95e4b;
+}
+
+#clearStorge {
+    background-color: #f00000;
+}
+#clearStorge:hover {
+    background-color: #ff0000;
+}
+
+canvas {
+    display: block;
+    background: white;
+    border: 2px solid black;
+    margin-right: 2%;
+}
+
+.corner-trigger {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    z-index: 1001;
+    background-color: transparent; 
+    width: 15%;
+    height: 10%;
+}
+
+.settings-container {
+    position: fixed;
+    top: 20px;
+    left: 10px;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.corner-trigger:hover + .settings-container,
+.settings-container:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.corner-trigger:hover{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.settings-container:hover {
+    opacity: 1;
+    visibility: visible;
+}
+
+.settings {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.settings select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: white;
+    cursor: pointer;
+}
