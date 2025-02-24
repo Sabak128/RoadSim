@@ -1,0 +1,264 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap; 
+}
+
+.controls button, .controls input, .controls label {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.controls button {
+    background-color: #ccc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.controls button:hover {
+    background-color: #999;
+}
+
+.controls input {
+    width: 100px;
+}
+
+.modes-canvas {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+.modes {
+    margin-left: 10px;
+    display: flex; 
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modes button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contrlMap {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.contrlMap input {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 77%;
+}
+
+.contrlMap label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px; 
+}
+
+#city {
+    background-color: #e1b40e;
+}
+#city:hover {
+    background-color: #f1c40f;
+}
+
+#erase {
+    background-color: #e74c3c;
+}
+#erase:hover {
+    background-color: #e95e4b;
+}
+
+#mountain {
+    background-color: #27ae60;
+}
+#mountain:hover {
+    background-color: #2ecc71;
+}
+
+#swamp {
+    background-color: #698339;
+}
+#swamp:hover {
+    background-color: #7d9c5b;
+}
+
+#water {
+    background-color: #3498db;
+}
+#water:hover {
+    background-color: #5dade2;
+}
+
+#clearMap {
+    background-color: #f00000;
+}
+#contrlMap:hover {
+    background-color: #ff0000;
+}
+
+#start {
+    background-color: #15b603;
+}
+#start:hover {
+    background-color: #1ccf04;
+}
+
+#saveMap {
+    background-color: #f39c12;
+}
+#saveMap:hover {
+    background-color: #f1c40f;
+}
+
+#loadMap {
+    background-color: #9b59b6;
+}
+#loadMap:hover {
+    background-color: #8e44ad;
+}
+
+#deleteMap {
+    background-color: #e74c3c;
+}
+#deleteMap:hover {
+    background-color: #e95e4b;
+}
+
+#clearStorge {
+    background-color: #f00000;
+}
+#clearStorge:hover {
+    background-color: #ff0000;
+}
+
+canvas {
+    display: block;
+    background: white;
+    border: 2px solid black;
+    margin-right: 2%;
+}
+
+.settings-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    background: white;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+#settings-modal {
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    background: white;
+    padding: 15px 15px 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    max-height: 80vh;
+    overflow: auto;
+}
+
+#settings-modal label {
+    grid-column: span 3;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#settings-modal input[type="color"] {
+    width: 40px;
+    height: 30px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#settings-modal button {
+    background-color: #ddd;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+#settings-modal button:hover {
+    background-color: #ccc;
+}
+
+.settings-reset {
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+    padding-right: 30px;
+    cursor: pointer;
+    position: static;
+    margin-left: -50px;
+    margin-top: 3px;
+}
+
+#reset-all {
+    grid-column: span 3;
+    background-color: #e74c3c;
+    color: black;
+    font-size: 16px;
+    padding: 10px;
+}
+
+#reset-all:hover {
+    background-color: #c0392b;
+}
+
+#language {
+    background-color: #f4f4f4;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#close{
+    padding: 10px;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
