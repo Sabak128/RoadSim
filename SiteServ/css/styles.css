@@ -11,10 +11,11 @@ body {
 
 .controls {
     display: flex;
-    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
     gap: 10px;
-    margin-bottom: 15px;
-    flex-wrap: wrap; 
+    padding-bottom: 10px;
+    max-width: 90%;
 }
 
 .controls button, .controls input, .controls label {
@@ -37,7 +38,7 @@ body {
 }
 
 .controls input {
-    width: 100px;
+    width: 50px;
 }
 
 .modes-canvas {

@@ -10,9 +10,10 @@ CORS(app)
 TERRAIN_COSTS = {
     "city": 0,
     "road": 5,
-    "mountain": 50,
+    "water": 50,
+    "mountain": 70,
     "swamp": 100,
-    "empty": 30
+    "emty": 30
 }
 
 def find_cities(grid):
@@ -63,7 +64,7 @@ def dijkstra(grid, start):
             continue
 
         for nx, ny in get_neighbors(x, y, grid):
-            new_cost = cost + TERRAIN_COSTS.get(grid[nx][ny], 3)  
+            new_cost = cost + TERRAIN_COSTS.get(grid[nx][ny], TERRAIN_COSTS["emty"])  
             if new_cost < dist[(nx, ny)]:
                 dist[(nx, ny)] = new_cost
                 prev[(nx, ny)] = (x, y)
@@ -95,6 +96,7 @@ def build_roads(grid):
 @app.route('/process_grid', methods=['POST'])
 def process_grid():
     data = request.json
+    TERRAIN_COSTS.update(data.get("terrain_costs", {}))
     grid = data.get("grid")
 
     if not grid:

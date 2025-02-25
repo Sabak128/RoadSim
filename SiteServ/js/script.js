@@ -1,6 +1,6 @@
 const canvas = document.getElementById("mapCanvas");
 const ctx = canvas.getContext("2d");
-const cellSize = 40;
+const cellSize = localStorage.getItem("size");
 const gridWidth = Math.floor(window.innerWidth / cellSize * 0.85);
 const gridHeight = Math.floor(window.innerHeight / cellSize * 0.9);
 let isDrawing = false;
@@ -117,13 +117,27 @@ function deleteMap() {
     alert(`Карта "${mapName}" удалена!`);
 }
 
+document.getElementById("prise_road_in_mountine").value = 70;
+document.getElementById("prise_road_in_swamp").value = 100;
+document.getElementById("prise_road_in_water").value = 50;
+document.getElementById("prise_road_in_road").value = 5;
+document.getElementById("prise_road").value = 30;
+
 async function sendGridToServer() {
+    let terrain_costs = {
+        "city": 0,
+        "mountain": Number(document.getElementById("prise_road_in_mountine").value) || 70,
+        "swamp": Number(document.getElementById("prise_road_in_swamp").value) || 100,
+        "water": Number(document.getElementById("prise_road_in_water").value) || 50,
+        "road": Number(document.getElementById("prise_road_in_road").value) || 5,
+        "emty": Number(document.getElementById("prise_road").value) || 30
+    }
     const response = await fetch("http://127.0.0.1:5000/process_grid", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({ grid })
+        body: JSON.stringify({ grid, terrain_costs })
     });
 
     if (response.ok) {

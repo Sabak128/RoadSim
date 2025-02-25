@@ -48,6 +48,12 @@
         <button class="settings-reset" onclick="resetRoadColor()">
             <span class="material-icons">refresh</span>
         </button>
+        
+        <label for="size">Размер:</label>
+        <input type="number" id="size" placeholder="">
+
+        <label for="paint-size">Толщина линии:</label>
+        <input type="number" id="paint-size" placeholder="" onchange="changePaintSize()">
 
         <button id="reset-all" onclick="resetAllColors()">Сбросить все цвета</button>
     
@@ -62,6 +68,10 @@
         <input type="number" id="prise_road_in_mountine" placeholder="">
         <label for="prise_road_in_swamp">Цена дороги в болоте:</label>
         <input type="number" id="prise_road_in_swamp" placeholder="">
+        <label for="prise_road_in_water">Цена дороги в воде:</label>
+        <input type="number" id="prise_road_in_water" placeholder="">
+        <label for="prise_road_in_road">Цена дороги на дороге:</label>
+        <input type="number" id="prise_road_in_road" placeholder="">
     </div>
     <div class="modes-canvas">
         <div class="modes"> 
@@ -81,6 +91,7 @@
         </div>
         <canvas id="mapCanvas"></canvas>
     </div>
+    <script src="js/controls.js"></script>
     <script src="js/settings.js"></script>
     <script src="js/script.js"></script>
     <script src="js/language.js"></script>
