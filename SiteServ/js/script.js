@@ -1,6 +1,6 @@
 const canvas = document.getElementById("mapCanvas");
 const ctx = canvas.getContext("2d");
-const cellSize = localStorage.getItem("size");
+const cellSize = 40;
 const gridWidth = Math.floor(window.innerWidth / cellSize * 0.85);
 const gridHeight = Math.floor(window.innerHeight / cellSize * 0.9);
 let isDrawing = false;
