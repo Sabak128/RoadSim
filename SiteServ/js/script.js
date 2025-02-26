@@ -148,4 +148,10 @@ async function sendGridToServer() {
         console.error("Ошибка сервера");
     }
 }
+
+function toggleSettings() {
+    const modal = document.getElementById("settings-modal");
+    modal.classList.toggle("hidden");
+}
+
 drawGrid();

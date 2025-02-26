@@ -18,45 +18,6 @@
             <option value="ru">Русский</option>
             <option value="en">English</option>
         </select>
-    
-        <label for="city-color">ქალაქი:</label>
-        <input type="color" id="city-color">
-        <button class="settings-reset" onclick="resetCityColor()">
-            <span class="material-icons">refresh</span>
-        </button>
-    
-        <label for="swamp-color">ჭაობი:</label>
-        <input type="color" id="swamp-color">
-        <button class="settings-reset" onclick="resetSwampColor()">
-            <span class="material-icons">refresh</span>
-        </button>
-    
-        <label for="mountain-color">მთა:</label>
-        <input type="color" id="mountain-color">
-        <button class="settings-reset" onclick="resetMountainColor()">
-            <span class="material-icons">refresh</span>
-        </button>
-    
-        <label for="water-color">წყალი:</label>
-        <input type="color" id="water-color">
-        <button class="settings-reset" onclick="resetWaterColor()">
-            <span class="material-icons">refresh</span>
-        </button>
-    
-        <label for="road-color">გზა:</label>
-        <input type="color" id="road-color">
-        <button class="settings-reset" onclick="resetRoadColor()">
-            <span class="material-icons">refresh</span>
-        </button>
-        
-        <label for="size">სიდიდე:</label>
-        <input type="number" id="size" placeholder="" value="40">
-
-        <label for="paint-size">ხატვის სიდიდე:</label>
-        <input type="number" id="paint-size" placeholder="" onchange="changePaintSize()">
-
-        <button id="reset-all" onclick="resetAllColors()">სტანდარტული ფერები</button>
-    
         <button id="close" onclick="toggleSettings()">დახურვა</button>
     </div>
     
@@ -91,9 +52,7 @@
         </div>
         <canvas id="mapCanvas"></canvas>
     </div>
-    <script src="js/controls.js"></script>
-    <script src="js/settings.js"></script>
-    <script src="js/script.js"></script>
     <script src="js/language.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
