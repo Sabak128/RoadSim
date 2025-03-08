@@ -100,7 +100,7 @@ def process_grid():
     grid = data.get("grid")
 
     if not grid:
-        return jsonify({"error": "Нет данных"}), 404
+        return jsonify({"error": "no info"}), 404
 
     updated_grid = build_roads(grid)
     return jsonify({"grid": updated_grid})

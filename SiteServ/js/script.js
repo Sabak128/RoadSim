@@ -12,7 +12,7 @@ canvas.height = gridHeight * cellSize;
 
 function setMode(newMode) {
     mode = newMode;
-    console.log("Режим установлен:", mode);
+    console.log("mode set:", mode);
 }
 
 function drawCell(x, y, fillStyle) {
