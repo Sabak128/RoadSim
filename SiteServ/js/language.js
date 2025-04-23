@@ -35,7 +35,7 @@ const translations = {
         priceMountain: "Mountain road price:",
         priceSwamp: "Swamp road price:",
         priceWater: "Water road price:",
-        priceRoad: "Road price in city:",
+        priceRoad: "Road price in Road:",
         city: "City",
         mountain: "Mountain",
         swamp: "Swamp",
